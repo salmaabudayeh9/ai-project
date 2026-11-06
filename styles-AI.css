@@ -1,0 +1,120 @@
+/* One narrow column on an earthy green background.
+   All colors are variables, so dark mode only swaps the values. */
+:root {
+  --bg: #dfe4d2;
+  --ink: #1f2a1d;
+  --muted: #4d5a47;
+  --line: #bfc8ae;
+  --link: #2e5226;
+  --fact: #2e5226;
+  --view: #7a4a22;
+  --predict: #5d5520;
+  --box: #e9ecdf;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b2419;
+    --ink: #e5e9da;
+    --muted: #a6b199;
+    --line: #36432f;
+    --link: #b9d49d;
+    --fact: #b9d49d;
+    --view: #e2b68c;
+    --predict: #d8cc8c;
+    --box: #222d20;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding-left: max(18px, env(safe-area-inset-left, 0px));
+  padding-right: max(18px, env(safe-area-inset-right, 0px));
+}
+
+a { color: var(--link); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--bg); color: var(--ink); padding: 0.4rem 0.8rem; }
+.skip:focus { top: 1rem; }
+
+/* Menu */
+.top { padding-block: 1.5rem 0; }
+.top nav { display: flex; flex-wrap: wrap; gap: 0.3rem 1.4rem; font-family: var(--sans); font-size: 0.85rem; }
+.top a { color: var(--muted); text-decoration: none; }
+.top a:hover { color: var(--ink); text-decoration: underline; }
+
+/* Text */
+h1, h2, h3 { font-weight: 500; line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(2.1rem, 6vw, 2.9rem); margin: 0 0 1.2rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.6rem; margin: 0 0 1rem; }
+h3 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+
+.intro { padding-block: 3.5rem 1rem; }
+.lede { font-size: 1.25rem; color: var(--muted); }
+.key { font-size: 1rem; color: var(--muted); }
+
+main > section { padding-block: 2.2rem; }
+main > section + section { border-top: 1px solid var(--line); }
+
+ul { padding-left: 1.2rem; }
+li + li { margin-top: 0.5rem; }
+ul.plain { list-style: none; padding-left: 0; }
+
+/* Labels: the word carries the meaning, the color only helps */
+.tag {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-right: 0.35rem;
+  white-space: nowrap;
+}
+.fact { color: var(--fact); }
+.view { color: var(--view); }
+.predict { color: var(--predict); }
+
+/* Cases */
+.case + .case { margin-top: 2.2rem; }
+.kind { margin: 0; font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* Diagram */
+.flow { margin: 1.8rem 0; overflow-x: auto; }
+.flow svg { width: 100%; min-width: 500px; height: auto; display: block; }
+.flow rect { fill: none; stroke: var(--muted); stroke-width: 1.5; }
+.flow .human rect { fill: var(--box); stroke: var(--fact); stroke-width: 2; }
+.flow text { fill: var(--ink); font-family: var(--serif); font-size: 19px; text-anchor: middle; }
+.flow text.small { fill: var(--muted); font-family: var(--sans); font-size: 12px; }
+.flow .arrow { stroke: var(--muted); stroke-width: 1.5; fill: none; }
+.flow figcaption { font-size: 0.95rem; font-style: italic; color: var(--muted); margin-top: 0.4rem; }
+
+.closing { font-size: 1.25rem; }
+
+.made { font-size: 1.02rem; }
+.sources { font-size: 1rem; }
+
+.foot { padding-block: 1.5rem 3rem; font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
+.foot p { margin: 0; border-top: 1px solid var(--line); padding-top: 1.2rem; }
+
+.short { width: 3rem; margin: 1.6rem 0; border: 0; border-top: 1px solid var(--muted); }

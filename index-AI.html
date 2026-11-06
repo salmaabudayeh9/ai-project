@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Should We Trust AI?</title>
+  <meta name="description" content="A short student explainer about artificial intelligence: what it is, where it helps, where it has gone wrong, and why people still need to check it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="wrap top">
+    <nav aria-label="Sections">
+      <a href="#what">What AI is</a>
+      <a href="#good">Uses</a>
+      <a href="#cases">Cases</a>
+      <a href="#next">Future</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="intro" aria-labelledby="title">
+      <h1 id="title">AI is useful. It still needs someone checking it.</h1>
+      <p class="lede">I use AI in my daily life, not only for studying, so I wanted to understand it better: what it actually is, where it helps, and where it has gone badly wrong.</p>
+      <p class="key">On this page, <span class="tag fact">Fact</span> means it comes from a linked source, <span class="tag view">My view</span> is my own opinion, and <span class="tag predict">Prediction</span> is a guess about the future.</p>
+    </section>
+
+    <section id="what" aria-labelledby="what-h">
+      <h2 id="what-h">What is AI?</h2>
+      <p><span class="tag fact">Fact</span> The OECD describes an AI system as a machine that uses the information it receives to work out an output, like a prediction, some content, a recommendation or a decision (<a href="https://oecd.ai/en/wonk/definition">OECD.AI</a>).</p>
+      <p>In simple terms, AI learns from examples. Nobody writes every rule by hand. A chatbot has seen so much text that it gets very good at guessing which word should come next.</p>
+
+      <figure class="flow">
+        <svg viewBox="0 0 720 120" role="img" aria-labelledby="flow-t flow-d">
+          <title id="flow-t">How an AI system works</title>
+          <desc id="flow-d">Four steps from left to right: data goes into a model, the model learns patterns, it gives an output, and a person checks the output before it is used.</desc>
+          <g class="step"><rect x="2" y="22" width="150" height="72" rx="6"/><text x="77" y="54">Data</text><text class="small" x="77" y="76">text, images, numbers</text></g>
+          <path class="arrow" d="M156 58 H 184 M184 58 l-7 -5 M184 58 l-7 5"/>
+          <g class="step"><rect x="188" y="22" width="150" height="72" rx="6"/><text x="263" y="54">Model</text><text class="small" x="263" y="76">learns patterns</text></g>
+          <path class="arrow" d="M342 58 H 370 M370 58 l-7 -5 M370 58 l-7 5"/>
+          <g class="step"><rect x="374" y="22" width="150" height="72" rx="6"/><text x="449" y="54">Output</text><text class="small" x="449" y="76">answer, image, action</text></g>
+          <path class="arrow" d="M528 58 H 556 M556 58 l-7 -5 M556 58 l-7 5"/>
+          <g class="step human"><rect x="560" y="22" width="156" height="72" rx="6"/><text x="638" y="54">A person checks</text><text class="small" x="638" y="76">is this right?</text></g>
+        </svg>
+        <figcaption>The last step is the one people skip most.</figcaption>
+      </figure>
+
+      <p><span class="tag view">My view</span> That is why I think "guessing" is the important word. AI doesn't know things the way we do, so it can sound completely sure of itself and still be wrong.</p>
+    </section>
+
+    <section id="good" aria-labelledby="good-h">
+      <h2 id="good-h">Where it helps</h2>
+      <ul>
+        <li>In daily life, it can plan a trip, explain something confusing or help write a message.</li>
+        <li>For studying, it can explain a topic in simpler words or make practice questions before an exam.</li>
+        <li>At work, it can write a first draft, summarise a long document or suggest code.</li>
+        <li>Image generators can turn a short description into a picture in seconds (<a href="https://www.washingtonpost.com/technology/interactive/2022/ai-image-generator/">The Washington Post</a>).</li>
+      </ul>
+      <p><span class="tag fact">Fact</span> The same article points out the problems. These tools learn from the internet, so they pick up its biases, and some of the images they learn from were used without the artists' permission.</p>
+      <p><span class="tag view">My view</span> For me it's a good starting point, but I wouldn't let it have the final word on anything important.</p>
+    </section>
+
+    <section id="cases" aria-labelledby="cases-h">
+      <h2 id="cases-h">Three real cases</h2>
+
+      <article class="case">
+        <p class="kind">Fraud</p>
+        <h3>Everyone on the call was fake</h3>
+        <p><span class="tag fact">Fact</span> In January 2024, an employee at the engineering firm Arup in Hong Kong joined a video call with what looked like the company's finance director and other colleagues. All of them were deepfakes, AI-made copies of real people. He made 15 transfers, about US$25 million in total, to the scammers (<a href="https://amp.scmp.com/news/hong-kong/law-and-crime/article/3263151/uk-multinational-arup-confirmed-victim-hk200-million-deepfake-scam-used-digital-version-cfo-dupe">South China Morning Post</a>).</p>
+        <p><span class="tag view">My view</span> What scares me is that he did what most of us would do. For anything involving money, the safe move now is to check another way, like calling the person back.</p>
+      </article>
+
+      <article class="case">
+        <p class="kind">Outage</p>
+        <h3>An AI tool left to act on its own</h3>
+        <p><span class="tag fact">Fact</span> According to the Financial Times, Amazon's cloud service had at least two outages in December 2025 involving its own AI tools. One lasted around 13 hours. Amazon disagreed and called it "user error", meaning access settings had been set up wrong (<a href="https://www.reuters.com/business/retail-consumer/amazons-cloud-unit-hit-by-least-two-outages-involving-ai-tools-ft-says-2026-02-20/">Reuters</a>, <a href="https://www.geekwire.com/2026/amazon-pushes-back-on-financial-times-report-blaming-ai-coding-tools-for-aws-outages/">GeekWire</a>).</p>
+        <p><span class="tag view">My view</span> I don't think it matters much whose fault it was. In both versions, a tool had more freedom than it should have, and nobody caught it in time.</p>
+      </article>
+
+      <article class="case">
+        <p class="kind">Electricity</p>
+        <h3>AI runs on real power</h3>
+        <p><span class="tag fact">Fact</span> In January 2026, PJM, which runs the largest power grid in the US, announced a plan to handle the fast rise in electricity demand from AI data centers. It came hours after the White House urged emergency action to prevent possible blackouts. PJM's chair said the goal was "keeping the lights on" while "recognizing the impact on consumers" (<a href="https://www.reuters.com/legal/litigation/pjm-unveils-plan-tackle-ai-driven-power-demand-surge-2026-01-16/">Reuters</a>).</p>
+        <p><span class="tag view">My view</span> I had never thought of AI as something physical. But every answer comes from a building full of computers that needs power, and normal households might end up paying part of the cost.</p>
+      </article>
+    </section>
+
+    <section id="next" aria-labelledby="next-h">
+      <h2 id="next-h">What could come next</h2>
+      <ul class="plain">
+        <li><span class="tag predict">Prediction</span> More AI "agents", tools that do tasks by themselves, will be used at work. Mistakes could spread faster if no one is watching.</li>
+        <li><span class="tag predict">Prediction</span> Deepfake scams will get easier to pull off. Things like a family code word might become normal.</li>
+        <li><span class="tag predict">Prediction</span> Electricity, more than the technology itself, could end up being what slows AI down.</li>
+      </ul>
+      <hr class="short">
+      <p><span class="tag fact">Fact</span> There are already guides for managing these risks. The US standards agency NIST published one that puts human oversight at the center (<a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST</a>).</p>
+      <p class="closing"><span class="tag view">My view</span> In the end, I think how AI turns out depends less on how clever it gets and more on whether people keep checking it.</p>
+    </section>
+
+    <section id="made" class="made" aria-labelledby="made-h">
+      <h2 id="made-h">How this website was made</h2>
+      <p>I wrote the content first and the code second. I picked one idea, that AI needs people checking it, and three cases that show it in different ways: fraud, an outage and electricity.</p>
+      <p>I kept the design simple on purpose: one column, an earthy green background and one serif font, so the text is easy to read. The page uses semantic HTML (header, nav, main, section, article) and one CSS file with color variables, which also gives it a dark mode. The diagram is an SVG with a text description for screen readers, and keyboard users can skip straight to the content.</p>
+      <!-- Add one sentence here about something you changed after testing the site on your phone. -->
+      <p><strong>AI use.</strong> I used Claude (<a href="https://claude.ai">claude.ai</a>) to find and check sources, suggest a structure, and draft a first version of the text and code. I rewrote the text in my own words, checked every fact against the linked sources, and tested the site.</p>
+    </section>
+
+    <section id="sources" aria-labelledby="sources-h">
+      <h2 id="sources-h">Sources</h2>
+      <ul class="sources">
+        <li>OECD.AI, <a href="https://oecd.ai/en/wonk/definition">updated definition of an AI system</a></li>
+        <li>The Washington Post, <a href="https://www.washingtonpost.com/technology/interactive/2022/ai-image-generator/">AI can now create images out of thin air</a>, 2022</li>
+        <li>South China Morning Post, <a href="https://amp.scmp.com/news/hong-kong/law-and-crime/article/3263151/uk-multinational-arup-confirmed-victim-hk200-million-deepfake-scam-used-digital-version-cfo-dupe">Arup confirmed as victim of HK$200 million deepfake scam</a>, 2024</li>
+        <li>Reuters, <a href="https://www.reuters.com/business/retail-consumer/amazons-cloud-unit-hit-by-least-two-outages-involving-ai-tools-ft-says-2026-02-20/">Amazon's cloud unit hit by outages involving AI tools</a>, 2026</li>
+        <li>GeekWire, <a href="https://www.geekwire.com/2026/amazon-pushes-back-on-financial-times-report-blaming-ai-coding-tools-for-aws-outages/">Amazon pushes back on Financial Times report</a>, 2026</li>
+        <li>Reuters, <a href="https://www.reuters.com/legal/litigation/pjm-unveils-plan-tackle-ai-driven-power-demand-surge-2026-01-16/">PJM unveils plan to tackle AI-driven power demand surge</a>, 2026</li>
+        <li>NIST, <a href="https://www.nist.gov/itl/ai-risk-management-framework">AI Risk Management Framework</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Webs and Apps Design, IE University, 2026</p>
+  </footer>
+</body>
+</html>
