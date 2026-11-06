@@ -1,33 +1,18 @@
 /* One narrow column on an earthy green background.
-   All colors are variables, so dark mode only swaps the values. */
+   All colors are variables, so the palette can be changed in one place. */
 :root {
-  --bg: #dfe4d2;
-  --ink: #1f2a1d;
-  --muted: #4d5a47;
-  --line: #bfc8ae;
-  --link: #2e5226;
-  --fact: #2e5226;
-  --view: #7a4a22;
-  --predict: #5d5520;
-  --box: #e9ecdf;
+  --bg: #d3d8bc;
+  --ink: #20271a;
+  --muted: #424c38;
+  --line: #aab38f;
+  --link: #2c4a20;
+  --fact: #2c4a20;
+  --view: #6a3a12;
+  --predict: #534a0c;
+  --box: #e1e5cf;
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1b2419;
-    --ink: #e5e9da;
-    --muted: #a6b199;
-    --line: #36432f;
-    --link: #b9d49d;
-    --fact: #b9d49d;
-    --view: #e2b68c;
-    --predict: #d8cc8c;
-    --box: #222d20;
-    color-scheme: dark;
-  }
 }
 
 * { box-sizing: border-box; }
@@ -60,7 +45,7 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 
 /* Menu */
 .top { padding-block: 1.5rem 0; }
-.top nav { display: flex; flex-wrap: wrap; gap: 0.3rem 1.4rem; font-family: var(--sans); font-size: 0.85rem; }
+.top nav { display: flex; flex-wrap: wrap; gap: 0.3rem 1.4rem; font-family: var(--sans); font-size: 0.95rem; }
 .top a { color: var(--muted); text-decoration: none; }
 .top a:hover { color: var(--ink); text-decoration: underline; }
 
@@ -84,8 +69,8 @@ ul.plain { list-style: none; padding-left: 0; }
 /* Labels: the word carries the meaning, the color only helps */
 .tag {
   font-family: var(--sans);
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-right: 0.35rem;
@@ -97,7 +82,7 @@ ul.plain { list-style: none; padding-left: 0; }
 
 /* Cases */
 .case + .case { margin-top: 2.2rem; }
-.kind { margin: 0; font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.kind { margin: 0; font-family: var(--sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
 /* Diagram */
 .flow { margin: 1.8rem 0; overflow-x: auto; }
@@ -105,7 +90,7 @@ ul.plain { list-style: none; padding-left: 0; }
 .flow rect { fill: none; stroke: var(--muted); stroke-width: 1.5; }
 .flow .human rect { fill: var(--box); stroke: var(--fact); stroke-width: 2; }
 .flow text { fill: var(--ink); font-family: var(--serif); font-size: 19px; text-anchor: middle; }
-.flow text.small { fill: var(--muted); font-family: var(--sans); font-size: 12px; }
+.flow text.small { fill: var(--muted); font-family: var(--sans); font-size: 13px; }
 .flow .arrow { stroke: var(--muted); stroke-width: 1.5; fill: none; }
 .flow figcaption { font-size: 0.95rem; font-style: italic; color: var(--muted); margin-top: 0.4rem; }
 
